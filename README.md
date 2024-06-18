@@ -29,11 +29,15 @@ $ npm run start:test
 ## Описание API
 Базовый URL:
 ```bash
-$ http://127.0.0.1:3000/database
+http://127.0.0.1:3000/database
 ```
 Эндпоинты:
-  1)  URL: "/create-documents"
+  1)  URL: 
+      ```bash
+      http://127.0.0.1:3000/database/create-documents
+      ```
       Метод: POST
+
       Тело запроса: 
       ```json
       {
@@ -52,8 +56,12 @@ $ http://127.0.0.1:3000/database
       ```
       Описание: создает указанное количество документов частями по 10 000 документов за раз
 
-  2)  URL: "/create-index"
+  2)  URL: 
+      ```bash
+      http://127.0.0.1:3000/database/create-index
+      ```
       Метод: POST
+
       Тело запроса: 
       ```json
       {
@@ -72,8 +80,13 @@ $ http://127.0.0.1:3000/database
       ```
       Описание: Создает индекс на указанном поле коллекции
 
-  3)  URL: "/remove-index"
+  3)  URL: 
+      ```bash
+      http://127.0.0.1:3000/database/remove-index
+      ```
+
       Метод: POST
+
       Тело запроса: 
       ```json
       {
@@ -92,10 +105,16 @@ $ http://127.0.0.1:3000/database
       ```
       Описание: Удаляет индекс на указанном поле коллекции
 
-  4)  URL: "/search"
+  4)  URL: 
+      ```bash
+      http://127.0.0.1:3000/database/search
+      ```
       Метод: GET
+
       Параметры запроса: 
-        "name": Имя для поиска документов
+
+          "name": Имя для поиска документов
+
       Пример запроса:
       ```bash
       $ curl -X GET "http://127.0.0.1:3000/database/search?name=q25meygk84"
